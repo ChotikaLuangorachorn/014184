@@ -4,7 +4,7 @@
 	$triglycerides = $_GET["triglycerides"];
 
 	//Total Cholesterol
-	$total = $ldl + $hdl ($triglycerides / 5); 
+	$total = $ldl + $hdl + ($triglycerides / 5); 
 	$result_total = "";
 	if ($total < 200) {
 		$result_total = "ideal";
