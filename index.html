@@ -3,11 +3,13 @@
 <head>
 	<title>Lab 4 PHP Script</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Kanit');
 		body{
-			background: url(http://www.kconnect.eu/sites/default/files/styles/top_teaser/public/images/health_on_the_net.jpg?itok=xdIRhd4o);
+			background: url(health_bg.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
@@ -16,13 +18,16 @@
 			margin-bottom: 10px;
 		}
 		[class*="row"]{
-
 			padding: 1em;
 		}
 		*{
 			font-family: 'Kanit', sans-serif;
 			font-size: 1em;
 		}
+		.material-icons {
+		  font-size: 1.5em; 
+		}
+
 		#bmi-form, #bmr-form, #cholesterol-form, #bmi-result, #bmr-result, #cholesterol-result{
 			background-color: rgba(255, 255, 255, 0.6);
 		}
@@ -47,9 +52,16 @@
 			</div>
 		</div>
 
+		<div class="row" align="center" id="home">
+			<div class="col-12">
+				<img src="exercising.png" height="420px">
+			</div>
+		</div>
+
 		<div class="row" id="bmi-form">
 			<div class="col-12">
 				<h4>คำนวณหาค่าดัชนีมวลกาย Body Mass Index (BMI)</h4>
+				<br>
 				ส่วนสูง:&emsp;&emsp;<input type="number" id="bmi-height" min="0" max="200" step="0.01" style="text-align: right;"> เซนติเมตร <br><br>
 				น้ำหนัก:&emsp;&emsp;<input type="number" id="bmi-weight" min="0" max="200" step="0.01" style="text-align: right;"> กิโลกรัม <br><br>
 				<button class="btn btn-info" id="btn-cal-bmi">คำนวณ</button>
@@ -58,6 +70,7 @@
 		</div>
 		<div class="row" id="bmi-result">
 			<div class="col-12">
+				<h5><i class="material-icons">description</i>ผลจากการคำนวณ</h5>
 				ดัชนีมวลกาย = <span id="bmi" style="color: blue"></span><br>
 				<b id="level-bmi" style="color: blue"></b> <span id="description"></span>
 			</div>
@@ -83,6 +96,7 @@
 		</div>
 		<div class="row" id="bmr-result">
 			<div class="col-12">
+				<h5><i class="material-icons">description</i>ผลจากการคำนวณ</h5>
 				BMR (Basal Metabolic Rate) พลังงานที่จำเป็นพื้นฐานในการมีชีวิต <span id="bmr" style="color: blue">-</span> กิโลแคลอรี่<br>
 				TDEE (Total Daily Energy Expenditure) พลังงานที่คุณใช้ในแต่ละวัน <span id="tdee" style="color: blue">-</span> กิโลแคลอรี่<br>
 			</div>
@@ -99,6 +113,7 @@
 		</div>
 		<div class="row" id="cholesterol-result">
 			<div class="col-12">
+				<h5><i class="material-icons">description</i>ผลจากการคำนวณ</h5>
 				ระดับไขมัน LDL: <span id="level-ldl" style="color: blue">-</span><br>
 				ระดับไขมัน HDL: <span id="level-hdl" style="color: blue">-</span><br>
 				ระดับไขมัน Triglycerides: <span id="level-triglycerides" style="color: blue">-</span><br>

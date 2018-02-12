@@ -18,6 +18,8 @@ $(document).ready(function() {
 
 			$("#cholesterol-form").hide();
 			$("#cholesterol-result").hide();
+
+			$("#home").hide();
 		} else if (this.value == "bmr"){
 			$("#bmi-form").hide();
 			$("#bmi-result").hide();
@@ -27,6 +29,8 @@ $(document).ready(function() {
 
 			$("#cholesterol-form").hide();
 			$("#cholesterol-result").hide();
+
+			$("#home").hide();
 		} else if (this.value == "cholesterol"){
 			$("#bmi-form").hide();
 			$("#bmi-result").hide();
@@ -36,6 +40,8 @@ $(document).ready(function() {
 
 			$("#cholesterol-form").show();
 			$("#cholesterol-result").hide();
+
+			$("#home").hide();
 		} else {
 			$("#bmi-form").hide();
 			$("#bmi-result").hide();
@@ -45,6 +51,8 @@ $(document).ready(function() {
 
 			$("#cholesterol-form").hide();
 			$("#cholesterol-result").hide();
+
+			$("#home").show();
 		}
 	});
 
