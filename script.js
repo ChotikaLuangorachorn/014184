@@ -65,7 +65,7 @@ $(document).ready(function() {
 		};
 		console.log(data);
 		$.ajax({
-			url: "bmi.php",
+			url: "php/bmi.php",
 			dataType: "json",
 			type : "GET",
 			data: data,
@@ -122,7 +122,7 @@ $(document).ready(function() {
 		console.log(data);
 		$("#bmr-result").show();
 		$.ajax({
-			url: "bmr.php",
+			url: "php/bmr.php",
 			dataType: "json",
 			type : "GET",
 			data: data,
@@ -149,7 +149,7 @@ $(document).ready(function() {
 
 		
 		$.ajax({
-			url: "cholesterol.php",
+			url: "php/cholesterol.php",
 			dataType: "json",
 			type : "GET",
 			data: data,
